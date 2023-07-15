@@ -26,10 +26,10 @@ const App = () => {
 
 	return (
 		<View style={{ padding: 10 }}>
-			<Text style={{ fontSize: 22, fontWeight: 'bold', marginTop: 10, marginBottom: 10 }}>Saldo: R$2.102,45</Text>
+			<Text style={styles.title}>Saldo: R$2.102,45</Text>
 			<Button onPress={addEntry} title='Adicionar'></Button>
 
-			<Text style={{ fontSize: 22, fontWeight: 'bold', marginTop: 10, marginBottom: 10 }}>Categorias</Text>
+			<Text style={styles.title}>Categorias</Text>
 			<FlatList
 				data={[
 					{ key: "Alimentação: $200" },
@@ -41,7 +41,7 @@ const App = () => {
 				renderItem={({ item }) => <Text>{item.key}</Text>}
 			></FlatList>
 
-			<Text style={{ fontSize: 22, fontWeight: 'bold', marginTop: 10, marginBottom: 10 }}>Ultimos Lançamentos</Text>
+			<Text style={styles.title}>Ultimos Lançamentos</Text>
 			<FlatList
 				data={[
 					{ key: "Padaria Asa branca" },
@@ -56,7 +56,12 @@ const App = () => {
 }
 
 const styles = StyleSheet.create({
-
+	title: {
+		fontSize: 22,
+		fontWeight: 'bold',
+		marginTop: 10,
+		marginBottom: 10
+	}
 });
 
 export default App;
