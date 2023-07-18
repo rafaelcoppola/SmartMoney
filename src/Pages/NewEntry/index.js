@@ -2,10 +2,12 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import React from 'react'
 import BalanceLabel from '../../components/BalanceLabel';
 
-export default function NewEntry({navigation}) {
+export default function NewEntry({ navigation }) {
+    const currentBalance = 2065.34;
     return (
         <View style={styles.container}>
-            <BalanceLabel />
+
+            <BalanceLabel currentBalance={currentBalance} />
 
             <View>
                 <TextInput style={styles.input} />
@@ -15,8 +17,8 @@ export default function NewEntry({navigation}) {
             </View>
 
             <View>
-                <Button title='Adicionar'/>
-                <Button title='Cancelar' onPress={navigation.goBack}/>
+                <Button title='Adicionar' />
+                <Button title='Cancelar' onPress={navigation.goBack} />
             </View>
         </View>
     )
