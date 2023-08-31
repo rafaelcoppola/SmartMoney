@@ -6,6 +6,7 @@ import EntryList from "../../components/EntryList";
 
 const Main = ({ navigation }) => {
     const currentBalance = 2064.35;
+
     const entriesCategories = [
         {
             key: "1",
